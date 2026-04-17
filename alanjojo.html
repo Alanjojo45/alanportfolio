@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Jojo</title>
+
+<style>
+:root {
+  --primary:#4f8cff;
+  --bg:#0b0f17;
+  --card:#121826;
+  --text:#e6eaf0;
+  --muted:#9aa4b2;
+}
+
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* LOGIN */
+#login {
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:var(--bg);
+}
+
+.login-box {
+  background:var(--card);
+  padding:40px;
+  width:320px;
+  text-align:center;
+  border-radius:10px;
+}
+
+.login-box h2 { color:var(--primary); }
+
+.login-box input {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  background:#1a2235;
+  border:none;
+  color:var(--text);
+  border-radius:5px;
+}
+
+.login-box button {
+  width:100%;
+  padding:12px;
+  background:var(--primary);
+  border:none;
+  cursor:pointer;
+  color:white;
+  border-radius:5px;
+}
+
+/* MAIN */
+#main { display:none; }
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#0f1626;
+}
+
+nav h2 { color:var(--primary); }
+
+/* HERO */
+.hero {
+  padding:100px 40px;
+}
+
+.hero h1 {
+  font-size:60px;
+  font-weight:300;
+}
+
+.hero span { color:var(--primary); }
+
+.hero p {
+  max-width:500px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* SECTION */
+section {
+  padding:70px 40px;
+  border-top:1px solid #1f2a44;
+}
+
+h2 {
+  color:var(--primary);
+  margin-bottom:30px;
+  font-weight:300;
+}
+
+/* ABOUT */
+.about-box {
+  background:var(--card);
+  padding:40px;
+  border-radius:8px;
+}
+
+/* SKILLS */
+.skill {
+  background:var(--card);
+  padding:20px;
+  margin-bottom:15px;
+  border-radius:8px;
+}
+
+.bar {
+  height:4px;
+  background:#1f2a44;
+  margin-top:10px;
+}
+
+.fill {
+  height:100%;
+  background:var(--primary);
+}
+
+/* PROJECTS */
+.project {
+  background:var(--card);
+  padding:20px;
+  margin-bottom:15px;
+  line-height:1.6;
+  border-radius:8px;
+}
+
+/* CONTACT */
+.contact {
+  background:var(--card);
+  padding:30px;
+  border-radius:8px;
+}
+
+.contact a {
+  color:var(--primary);
+  text-decoration:none;
+  display:block;
+  margin-top:5px;
+}
+
+.contact a:hover {
+  text-decoration:underline;
+}
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  padding:10px 20px;
+  border:1px solid var(--primary);
+  color:var(--primary);
+  text-decoration:none;
+  margin-top:20px;
+  border-radius:5px;
+}
+
+.btn:hover {
+  background:var(--primary);
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="login-box">
+    <h2>Welcome</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="enter()">Enter</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+<nav>
+  <h2>AJ</h2>
+</nav>
+
+<div class="hero">
+  <h3>Computer Science Engineering Student</h3>
+  <h1>Alan <span>Jojo</span></h1>
+  <p>
+    I am a Computer Science Engineering student focused on building strong technical skills
+    and creating a solid career in the tech industry, while exploring opportunities in business and startups.
+  </p>
+  <a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<section>
+  <h2>About Me</h2>
+  <div class="about-box">
+    I am currently pursuing Computer Science Engineering. I am developing my skills in programming,
+    logical thinking, and problem solving. My goal is to build a strong foundation in technology
+    and later expand into business and entrepreneurship.
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+
+  <div class="skill">
+    HTML & CSS
+    <div class="bar"><div class="fill" style="width:75%"></div></div>
+  </div>
+
+  <div class="skill">
+    C Programming
+    <div class="bar"><div class="fill" style="width:60%"></div></div>
+  </div>
+
+  <div class="skill">
+    Python
+    <div class="bar"><div class="fill" style="width:55%"></div></div>
+  </div>
+
+  <div class="skill">
+    Problem Solving
+    <div class="bar"><div class="fill" style="width:65%"></div></div>
+  </div>
+
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <strong>Personal Portfolio Website</strong><br>
+    Designed and developed a responsive personal portfolio using HTML and CSS,
+    focusing on clean UI design and structured layout.
+  </div>
+
+  <div class="project">
+    <strong>Basic Calculator Application</strong><br>
+    Built an interactive calculator using HTML, CSS, and JavaScript,
+    implementing core arithmetic operations and user input handling.
+  </div>
+
+  <div class="project">
+    <strong>Programming Practice Collection</strong><br>
+    Developed multiple small-scale programs in C and Python to improve
+    logical thinking, problem solving, and coding efficiency.
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+
+    <div>
+      <strong>Email</strong>
+      <a href="mailto:alanjojo45@gmail.com">alanjojo45@gmail.com</a>
+    </div>
+
+    <br>
+
+    <div>
+      <strong>LinkedIn</strong>
+      <a href="https://www.linkedin.com/in/alan-jojo-899420304" target="_blank">
+        www.linkedin.com/in/alan-jojo-899420304
+      </a>
+    </div>
+
+    <br>
+
+    <div>
+      <strong>GitHub</strong>
+      <a href="https://github.com/alanjojo45" target="_blank">
+        github.com/alanjojo45
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<script>
+function enter(){
+  let e=document.getElementById("email").value;
+  let p=document.getElementById("pass").value;
+
+  if(e && p){
+    document.getElementById("login").style.display="none";
+    document.getElementById("main").style.display="block";
+  } else {
+    alert("Enter details");
+  }
+}
+</script>
+
+</body>
+</html>
